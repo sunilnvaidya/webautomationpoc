@@ -1,7 +1,21 @@
 <html>
 <head>
+<script>
+function myFunction() {
+  location.replace("https://www.w3schools.com")
+}
+    
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
 </head>
 <body>
 Login
+  <button onclick="myFunction()">Replace document</button>
 </body>
 </html>
