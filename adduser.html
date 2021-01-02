@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POC Website</title>
+  <!--<link href="demo.css" media="all" rel="stylesheet" type="text/css">-->
+  <script type="text/javascript">
+	function addUser() {
+		window.location = "addusersuccess.html";
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>POC Website-Add User</h1>
+      <p>Please input user details.</p>
+      <form name="adduser_form" onsubmit="addUser(); return false;" method="post">
+        <table>
+          <tr>
+            <td><label for="username_field">User Name:</label></td>
+            <td><input id="username_field" size="30" type="text"></td>
+          </tr>
+          <tr>
+            <td><label for="states_field">Select a State:</label></td>
+            <td>  
+				<select name="states" id="states_field">
+					<option value="AL">AL</option>
+					<option value="CA">CA</option>
+					<option value="ID">ID</option>
+					<option value="KS">KS</option>
+					<option value="PA">PA</option>
+				</select>
+			</td>
+          </tr>
+	  
+          <tr>
+            <td>&nbsp;</td>
+            <td><input id="add_button" type="submit" value="Add User"></td>
+          </tr>
+        </table>
+      </form>
+  </div>
+</body>
+</html>
