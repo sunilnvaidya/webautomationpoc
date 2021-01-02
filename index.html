@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>POC Website</title>
+  <!--<link href="demo.css" media="all" rel="stylesheet" type="text/css">-->
+  <script type="text/javascript">
+	function loginUser(username, password) {
+        if (username == "admin" && password == "Abcd1234") {
+            window.location = "adduser.html";
+        } else {
+            //window.location = "error.html";
+			var username = '';
+			var password = '';
+			var loginerror = '';
+			username = document.getElementById("username_field").value;
+			password = document.getElementById("password_field").value;
+			
+			//alert(username + password);
+			
+			if (username == "" && password == "")
+				loginerror = "Username and Password is required";
+			if (username != "" && password == "")
+				loginerror = "Password is required";
+			if (username == "" && password != "")
+				loginerror = "Username is required";
+			if (username != "" && password != "")
+				loginerror = "Username and Password is incorrect";
+				
+			document.getElementById('loginerror_field').innerHTML = "Login Error: " + loginerror;
+        }
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>POC Website</h1>
+      <p>Please input your user name and password and click the login button.</p>
+      <form name="login_form" onsubmit="loginUser(this.username_field.value, this.password_field.value);return false;" method="post">
+        <table>
+          <tr>
+            <td><label for="username_field">User Name:</label></td>
+            <td><input id="username_field" size="30" type="text"></td>
+          </tr>
+          <tr>
+            <td><label for="password_field">Password:</label></td>
+            <td><input id="password_field" size="30" type="password"></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input id="login_button" type="submit" value="LOGIN"></td>
+          </tr>
+		  <tr>
+			<td>
+				<td><label id="loginerror_field" style="color:red"></label></td>
+			</td>
+		  </tr>
+        </table>
+      </form>
+  </div>
+</body>
+</html>
