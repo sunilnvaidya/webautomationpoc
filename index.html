@@ -27,6 +27,7 @@
 				loginerror = "Username and Password is incorrect";
 				
 			document.getElementById('loginerror_field').innerHTML = "Login Error: " + loginerror;
+			document.getElementById('loginerror_field').style.display = 'block';
         }
     }
   </script>
@@ -51,7 +52,7 @@
           </tr>
 		  <tr>
 			<td>
-				<td><label id="loginerror_field" style="color:red"></label></td>
+				<td><label id="loginerror_field" style="color:red; display:none"></label></td>
 			</td>
 		  </tr>
         </table>
