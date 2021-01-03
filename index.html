@@ -8,6 +8,7 @@
         if (username == "admin" && password == "Abcd1234") {
             window.location = "adduser.html";
         } else {
+            document.getElementById('loginerror_field').style.display = 'block';
             //window.location = "error.html";
 			var username = '';
 			var password = '';
@@ -27,7 +28,8 @@
 				loginerror = "Username and Password is incorrect";
 				
 			document.getElementById('loginerror_field').innerHTML = "Login Error: " + loginerror;
-			document.getElementById('loginerror_field').style.display = 'block';
+
+
         }
     }
   </script>
